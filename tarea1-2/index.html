@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Taller Rapidito</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1>Taller Rapidito</h1>
+
+      <h2>Su carro con los mejores</h2>
+
+      <div id="images" class="text-center">
+        <img class="col-2 col-offset-2" src="img/vocho.png">
+        <img class="col-2" src="img/viejo.png">
+        <img class="col-2" src="img/lujo.png">
+        <img class="col-2" src="img/mustang.png">
+      </div>
+
+
+      <h3>Formulario de Registro de Clientes</h3>
+
+      <form class="needs-validation" id="frmClientes" novalidate>
+        <div class="form-row">
+
+          <div class="col-md-4 mb-3">
+            <label for="txtNombre">Nombre</label>
+            <input type="text" class="form-control" id="txtNombre" placeholder="Nombre" required>
+            <div class="valid-feedback">
+              Nombre válido
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="txtPrimerApellido">Primer Apellido</label>
+            <input type="text" class="form-control" id="txtPrimerApellido" placeholder="Primer Apellido" required>
+            <div class="valid-feedback">
+              Apellido válido
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="txtSegundoApellido">Segundo Apellido</label>
+            <input type="text" class="form-control" id="txtSegundoApellido" placeholder="Segundo Apellido" required>
+            <div class="valid-feedback">
+             Apellido válido
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="txtCedula">Cedula</label>
+            <input type="text" class="form-control" id="txtCedula" placeholder="Cédula" required>
+            <div class="valid-feedback">
+              Cédula válida
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="txtTelefono">Teléfono</label>
+            <input type="text" class="form-control" id="txtTelefono" placeholder="Teléfono" required>
+            <div class="valid-feedback">
+              Teléfono válido
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-3">
+            <label for="email">Correo</label>
+            <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" required>
+            <div class="valid-feedback">
+              Correo válido
+            </div>
+          </div>
+        </div>
+
+
+        <button class="btn btn-primary" id="btnRegistrarCliente"type="submit">Registrar Cliente</button>
+      </form>
+
+
+
+      <div class="row">
+        <table class="col-12" id="tblClientes">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Apellido</th>
+              <th>Cédula</th>
+              <th>Teléfono</th>
+              <th>Correo</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+  <script src="js/clases.js"></script>
+  <script src="js/servicio.clientes.js"></script>
+  <script src="js/controlador.clientes.js"></script>
+  <script src="js/controlador.lista.clientes.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  </body>
+</html>

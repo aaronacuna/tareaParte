@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registre un trabajo</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1>Taller Rapidito</h1>
+
+      <h2>Su carro con los mejores</h2>
+
+      <div id="images" class="text-center">
+        <img class="col-2 col-offset-2" src="img/vocho.png">
+        <img class="col-2" src="img/viejo.png">
+        <img class="col-2" src="img/lujo.png">
+        <img class="col-2" src="img/mustang.png">
+      </div>
+
+
+      <h3>Formulario de Registro de Trabajos</h3>
+
+      <form class="needs-validation" id="frmTrabajos" novalidate>
+        <div class="form-row">
+
+          <div class="col-md-4 mb-3">
+            <label for="txtTipo">Nombre</label>
+            <input type="text" class="form-control" id="txtTipo" placeholder="Nombre" required>
+            <div class="valid-feedback">
+              Nombre válido
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="txtDescripcion">Descripción</label>
+            <input type="text" class="form-control" id="txtDescripcion" placeholder="Descripción" required>
+            <div class="valid-feedback">
+              Descripción válida
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-3">
+            <label for="fecha">Fecha</label>
+            <input type="date" class="form-control" id="fecha" placeholder="Fecha" required>
+            <div class="valid-feedback">
+             Fecha válida
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="col-md-4 mb-3">
+            <label for="txtEstado">Estado</label>
+            <input type="text" class="form-control" id="txtEstado" placeholder="Estado" required>
+            <div class="valid-feedback">
+              Estado válido
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-3">
+            <label for="txtCosto">Costo</label>
+            <input type="text" class="form-control" id="txtCosto" placeholder="Costo" required>
+            <div class="valid-feedback">
+              Costo válido
+            </div>
+          </div>
+        </div>
+
+
+        <button class="btn btn-primary" id="btnRegistrarTrabajo"type="submit">Registrar Trabajo</button>
+      </form>
+
+
+
+      <div class="row">
+        <table class="col-12" id="tblTrabajo">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Costo</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+
+  <script src="js/clases.js"></script>
+  <script src="js/servicio.clientes.js"></script>
+  <script src="js/servicio.vehiculos.js"></script>
+  <script src="js/controlador.regTrabajos.js"></script>
+
+
+  </body>
+</html>

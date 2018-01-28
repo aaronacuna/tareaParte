@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registre su Vehiculo</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1>Taller Rapidito</h1>
+
+      <h2>Su carro con los mejores</h2>
+
+      <div id="images" class="text-center">
+        <img class="col-2 col-offset-2" src="img/vocho.png">
+        <img class="col-2" src="img/viejo.png">
+        <img class="col-2" src="img/lujo.png">
+        <img class="col-2" src="img/mustang.png">
+      </div>
+
+
+      <h3>Formulario de Registro de Vehículos</h3>
+
+      <form class="needs-validation" id="frmVehículos" novalidate>
+        <div class="form-row">
+
+          <div class="col-md-4 mb-3">
+            <label for="txtMatricula">Matrícula</label>
+            <input type="text" class="form-control" id="txtMatricula" placeholder="Matrícula" required>
+            <div class="valid-feedback">
+              Matrícula válida
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="txtMarca">Marca</label>
+            <input type="text" class="form-control" id="txtMarca" placeholder="Marca" required>
+            <div class="valid-feedback">
+              Marca válida
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-3">
+            <label for="txtModelo">Modelo</label>
+            <input type="text" class="form-control" id="txtModelo" placeholder="Modelo" required>
+            <div class="valid-feedback">
+             Modelo válido
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="txtAnno">Año</label>
+            <input type="text" class="form-control" id="txtAnno" placeholder="Año" required>
+            <div class="valid-feedback">
+              Año válido
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="txtCapacidad">Capacidad</label>
+            <input type="text" class="form-control" id="txtCapacidad" placeholder="Capacidad" required>
+            <div class="valid-feedback">
+              Capacidad válida
+            </div>
+          </div>
+
+
+          <div class="col-md-4 mb-3">
+            <label for="txtKilometraje">Kilometraje</label>
+            <input type="text" class="form-control" id="txtKilometraje" placeholder="Kilometraje" required>
+            <div class="valid-feedback">
+              Kilometraje válido
+            </div>
+          </div>
+        </div>
+
+
+        <button class="btn btn-primary" id="btnRegistrarVehiculo"type="submit">Registrar Vehículo</button>
+      </form>
+
+
+
+      <div class="row">
+        <table class="col-12" id="tblVehiculos">
+          <thead>
+            <tr>
+              <th>Matrícula</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Capacidad</th>
+              <th>Kilometraje</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+
+  <script src="js/clases.js"></script>
+  <script src="js/servicio.clientes.js"></script>
+  <script src="js/controlador.regVehiculos.js"></script>
+  <script src="js/controlador.lista.vehiculos.js"></script>
+
+  </body>
+</html>
